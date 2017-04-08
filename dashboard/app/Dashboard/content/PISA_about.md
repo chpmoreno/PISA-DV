@@ -1,5 +1,3 @@
-# PISA-DV
-
 ## Introduction
 
 In this app we use **P**rogramme for **I**nternational **S**tudent **A**ssessment (**PISA**) survey results, some macroeconomic variables and some news related to PISA media interpretation to compare between countries through some interactive data visualization. The application was developed using R, shiny and some D3 libraries implemented in R (e.g plotly). The procedure is described below. 

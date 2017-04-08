@@ -1,0 +1,13 @@
+code,table,Name,Measure
+ST07Q01,students,Repeat,mode
+ST11Q01,students,Mother at home,mode
+ST13Q01,students,Mother higher schooling,mode
+ST26Q01,students,Possession desk,mode
+ST28Q01,students,Books at home,mode
+ST72Q01,students,Class size,median
+SC01Q01,schools,Public or private,mode
+SC02Q01,schools,Gov funding,median
+SC14Q02,schools,Math teachers,mode
+SC15Q03,schools,Group ability,mode
+SC26Q01,schools,Teacher high morale,mode
+SC20Q01,schools,Additional maths lessons ,mode
