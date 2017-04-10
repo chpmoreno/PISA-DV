@@ -24,6 +24,26 @@ library(mclust)
 
 options(shiny.reactlog=TRUE)
 
+
+plot_coef <- function(parameters_cnt, parameters_cnt_names, country) {
+  parameters <- parameters_cnt %>% filter(IDcountry == country) %>% select(-one_of("IDcountry", "X.Intercept.")) %>% t()
+  
+  data_plot <- cbind(parameters, parameters_cnt_names) %>% mutate(code = substrextractright(as.character(code), 1)) %>% 
+    left_join(dictionary) %>% mutate(id = 1:length(code))
+  
+  g <- plot_ly(data = data_plot, x = ~id, y = ~parameters, size = ~abs(parameters), color = ~table,
+               colors = c("green", "blue"), text = ~name) %>% 
+    layout(title = 'Variable by impact and dataset',
+           xaxis = list(title = '',
+                        zeroline = TRUE),
+           yaxis = list(title = 'Coefficient'))
+  return(g)
+}
+
+substrextractright <- function(x, n){
+  substr(x, 1, nchar(x)-1)
+}
+
 # set the working directory
 setwd("~/Dropbox/Documents/BGSE/Second_Term/DV/Project/PISA/github/PISA-DV/dashboard/app/Dashboard")
 
