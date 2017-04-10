@@ -16,7 +16,7 @@ setwd("yourpath")
 #   list_schools.RData: list with 5 imputed schools dataframes
 #   list_students.RData: list with 5 imputed students dataframes
 escuelitas<-read.sc(0)[,1] #Load schools dataset: IDschools variable
-load("imputation/Rdata/students/16_dic_imp_100000/ID_students_100000.RData")
+load("ID_students_100000.RData")
 load("list_schools.RData")
 load("list_students.RData")
 
